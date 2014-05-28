@@ -3,6 +3,7 @@ using PluginDemo.Common;
 
 namespace TestPluginOne
 {
+    [Serializable]
     public class PluginOne : IPlugin
     {
         public void Setup()
