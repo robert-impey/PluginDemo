@@ -8,3 +8,5 @@ _ReSharper.*
 *.vbproj.user
 *.suo
 *.cache
+UpgradeLog.htm
+Backup

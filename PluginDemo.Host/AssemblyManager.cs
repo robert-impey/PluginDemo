@@ -30,11 +30,10 @@ namespace PluginDemo.Host
 
             _domain = AppDomain.CreateDomain(name + "Domain", AppDomain.CurrentDomain.Evidence, setup);
 
-            var scannerType = typeof (Scanner);
+            var scannerType = typeof(Scanner);
             _scanner = (Scanner)_domain.CreateInstanceAndUnwrap(scannerType.Assembly.FullName, scannerType.FullName);
             _scanner.Load(name);
             _scanner.Setup();
-
         }
 
         public void DoWork()

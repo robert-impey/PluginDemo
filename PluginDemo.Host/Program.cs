@@ -3,9 +3,9 @@ using System.IO;
 
 namespace PluginDemo.Host
 {
-    class Program
+    public static class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             Directory.CreateDirectory("plugins");
 
@@ -14,10 +14,10 @@ namespace PluginDemo.Host
             manager.LoadFrom("plugins\\TestPluginOne.dll");
             manager.DoWork();
 
-           Directory.Delete("plugins", true);
+            Directory.Delete("plugins", true);
 
             manager.DoWork();
-            manager.ShowCrossDomainPolutionExceptions();
+            manager.ShowCrossDomainPollutionExceptions();
 
             Console.WriteLine("Press any key to continue...");
             Console.ReadKey();
